@@ -125,11 +125,11 @@ menu:
   main:
     - identifier: About
       name: About
-      url: /about/
+      url: /about
       weight: 10
     - identifier: Publications
       name: Publications
-      url: /publications/
+      url: /publications
       weight: 20
     # - identifier: Projects
     #   name: Projects

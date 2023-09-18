@@ -1,5 +1,5 @@
 ---
-title: "Eduactional Qualification"
+title: "Publications"
 author: "Gauransh K."
 ShowReadingTime: false
 ShowShareButtons: false

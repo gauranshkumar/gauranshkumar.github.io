@@ -1,9 +1,9 @@
 ---
-title: "Eduactional Qualification"
+title: "Experience"
 author: "Gauransh K."
 ShowReadingTime: false
 ShowPostNavLinks: false
-ShowBreadCrumbs: true
+ShowBreadCrumbs: false
 ShowWordCount: false
 ShowRssButtonInSectionTermList: false
 UseHugoToc: false

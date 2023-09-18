@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Gauransh Kumar</title>
+    <link>https://gauranshkumar.github.io/</link>
+    <description>Recent content on Gauransh Kumar</description>
+    <image>
+      <title>Gauransh Kumar</title>
+      <url>https://gauranshkumar.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://gauranshkumar.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://gauranshkumar.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://gauranshkumar.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gauranshkumar.github.io/about/</guid>
+      <description>I am Gauransh Kumar a first-year student of Computer Science Master&amp;rsquo;s at the GEODES and RALI lab within the department of Computer Science and Operations Resarch (DIRO) at Université de Montréal.
+My area of research interests lies in Model Driven Engineering, Software Engineering, and Natural Language Processing. My major reasearch focus is on the application of NLP techniques and LLM&amp;rsquo;s in the field of Software Engineering Systematic Literature Review (SLR). The goal is to automate the Screening phase of SLR using NLP techniques and LLM&amp;rsquo;s.</description>
+    </item>
+    
+    <item>
+      <title>Eduactional Qualification</title>
+      <link>https://gauranshkumar.github.io/education/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gauranshkumar.github.io/education/</guid>
+      <description>   Degree Institute Year CGPA/Percentage     Master of Computer Science Université de Montréal 2023-2025 -/4.0   Bachelor of Technology Maharaja Agrasen Institute of Technology 202o-2023 9.0/10.0   Diploma in Computer Engineering Board of Technical Education, Delhi 2017-2020 83.64%   Secondary School Central Board of Secondary Education 2016-2017 8.0/10.0    </description>
+    </item>
+    
+    <item>
+      <title>Experience</title>
+      <link>https://gauranshkumar.github.io/experience/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gauranshkumar.github.io/experience/</guid>
+      <description>   Company Position Duration Location     Datazip DevOps Intern Dec 2022 - June 2023 Remote/Bangalore, India   Université de Montréal Mitacs Globalink Research Intern July 2022 - Oct 2022 Montreal, Canada   AIcrowd Technical Staff Intern Nov 2021 - May 2022 Remote   Defence Research and Development Organisation Research Intern Dec 2019 - Mar 2021 Delhi, India    </description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://gauranshkumar.github.io/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gauranshkumar.github.io/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://gauranshkumar.github.io/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gauranshkumar.github.io/publications/</guid>
+      <description>   Year Type Publication Venue Link     2023 Tech Report Assessing the Ability of ChatGPT to Screen Articles for Systematic Reviews arXiv preprint [Source] [Bib]    </description>
+    </item>
+    
+  </channel>
+</rss>

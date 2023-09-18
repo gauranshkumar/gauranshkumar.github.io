@@ -3,7 +3,7 @@ title: "Eduactional Qualification"
 author: "Gauransh K."
 ShowReadingTime: false
 ShowPostNavLinks: false
-ShowBreadCrumbs: true
+ShowBreadCrumbs: false
 ShowWordCount: false
 ShowRssButtonInSectionTermList: false
 UseHugoToc: false

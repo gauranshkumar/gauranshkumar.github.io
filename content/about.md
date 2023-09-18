@@ -2,7 +2,8 @@
 title: "About"
 author: "Gauransh K."
 ShowReadingTime: false
-ShowPostNavLinks: false
+ShowShareButtons: false
+ShowPostNavLinks: true
 ShowBreadCrumbs: false
 ShowWordCount: false
 ShowRssButtonInSectionTermList: false
@@ -16,5 +17,5 @@ I recieved my Bachelor's degree from [**Maharaja Agrasen Institue Of Technology*
 
 
 ### More Information
-1. [Educational Qualtification](/about/education/)
-2. [Work Experience](/about/experience/)
+1. [Educational Qualtification](/education)
+2. [Work Experience](/experience)
