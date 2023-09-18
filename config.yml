@@ -1,0 +1,155 @@
+baseURL: https://gauranshkumar.github.io/
+languageCode: en-us
+title: Gauransh Kumar
+theme: "PaperMod"
+paginate: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Gauransh Kumar
+  description: "Portfolio website of Gauransh Kumar"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Me
+  # author: ["Me", "You"] # multiple authors
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: favicon/favicon.ico
+    favicon16x16: favicon/favicon-16x16.png
+    favicon32x32: favicon/favicon-32x32.png
+    apple_touch_icon: favicon/apple-touch-icon.png
+    safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: "Home"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Gauransh Kumar
+    subtitle: "MS in Comp. Sci. @ UdeM"
+    imageUrl: "img/photo_gruv.jpeg"
+    imageWidth: 200
+    imageHeight: 200
+    imageTitle: Gauransh K.
+    buttons:
+      - name: About 
+        url: about
+      - name: Publications
+        url: publications
+      # - name: Projects
+      #   url: projects
+      - name: CV
+        url: resume/Gauransh_Kumar_Resume.pdf
+
+  # home-info mode
+  homeInfoParams:
+    enabled: false
+    Title: "Gauransh Kumar"
+    Content: 
+
+  socialIcons:
+    - name: googlescholar
+      url: "https://scholar.google.com/citations?user=JXxRHAsAAAAJ"
+    - name: github
+      url: "https://github.com/gauranshkumar"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/gauranshk21"
+    - name: twitter
+      url: "https://twitter.com/gauransh_k"
+    - name: orcid
+      url: "https://orcid.org/0009-0002-0232-9427"
+    - name: researchgate
+      url: "https://www.researchgate.net/profile/Gauransh-Kumar"
+    - name: email
+      url: mailto:gauransh.kumar@umontreal.ca
+
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: About
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: Publications
+      name: Publications
+      url: /publications/
+      weight: 20
+    # - identifier: Projects
+    #   name: Projects
+    #   url: /projects/
+    #   weight: 30
+    # - identifier: Blogs
+    #   name: Blogs
+    #   url: /blogs/
+    #   weight: 40
+    - identifier: Calendar
+      name: Calendar
+      url: https://calendar.app.google/Y6LNvFnWTHg2sB6y7
+      weight: 50
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
