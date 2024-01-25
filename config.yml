@@ -67,7 +67,7 @@ params:
     imageHeight: 200
     imageTitle: Gauransh K.
     buttons:
-      - name: About 
+      - name: About
         url: about
       - name: Publications
         url: publications
@@ -80,7 +80,7 @@ params:
   homeInfoParams:
     enabled: false
     Title: "Gauransh Kumar"
-    Content: 
+    Content:
 
   socialIcons:
     - name: googlescholar
@@ -100,7 +100,7 @@ params:
 
   analytics:
     google:
-      SiteVerificationTag: "XYZabc"
+      SiteVerificationTag: "G-CJ1DSXFKGJ"
     bing:
       SiteVerificationTag: "XYZabc"
     yandex:
