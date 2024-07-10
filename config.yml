@@ -1,4 +1,4 @@
-baseURL: https://gauranshkumar.github.io/
+baseURL: https://gauransh.dev/
 languageCode: en-us
 title: Gauransh Kumar
 theme: "PaperMod"
@@ -9,7 +9,7 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-googleAnalytics: UA-123-45
+googleAnalytics: G-L1FTB938XP
 
 minify:
   disableXML: true
@@ -100,7 +100,7 @@ params:
 
   analytics:
     google:
-      SiteVerificationTag: "G-CJ1DSXFKGJ"
+      SiteVerificationTag: "G-L1FTB938XP"
     bing:
       SiteVerificationTag: "XYZabc"
     yandex:
