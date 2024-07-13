@@ -12,5 +12,5 @@ UseHugoToc: false
 
 | Year | Type | Publication | Venue | Link |
 | :---: | :---: | :---: | :---: | :---: |
-| 2024 | Journal | [**Screening articles for systematic reviews with ChatGPT**](https://www.sciencedirect.com/science/article/pii/S2590118424000303) | Journal of Computer Languages| [\[**Source**\]](https://www.sciencedirect.com/science/article/pii/S2590118424000303) [\[**Bib**\]](bibs/2024.cola.101287.bib)|
+| 2024 | Journal | [**Screening articles for systematic reviews with ChatGPT**](https://doi.org/10.1016/j.cola.2024.101287) | Journal of Computer Languages| [\[**Source**\]](https://www.sciencedirect.com/science/article/pii/S2590118424000303) [\[**Bib**\]](bibs/S2590118424000303.bib)|
 | 2023 | Tech Report | [**Assessing the Ability of ChatGPT to Screen Articles for Systematic Reviews**](https://doi.org/10.48550/arXiv.2307.06464) | arXiv preprint | [\[**Source**\]](https://arxiv.org/pdf/2307.06464.pdf) [\[**Bib**\]](bibs/2307.06464.bib)|
