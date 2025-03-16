@@ -1,0 +1,363 @@
+@import "https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap";
+
+/* Light theme variables */
+:root {
+  --background: #fff;
+  --text-color: #333;
+  --link-color: #3498DB;
+  --nav-bg: #fff;
+  --nav-link-color: #818181;
+  --nav-link-hover: #CFD8DC;
+  --footer-color: #818181;
+  --sidenav-shadow: 2px 2px 20px #F0F3F4;
+  --accent-green: green;
+  --accent-red: #E74C3C;
+  --accent-purple: #8E44AD;
+  --accent-yellow: #F1C40F;
+  --card-background: #fff;
+  --blog-date-color: #CFD8DC;
+}
+
+/* Dark theme overrides via the .dark-mode class */
+.dark-mode {
+  --background: #1e1e1e;
+  --text-color: #f1f1f1;
+  --link-color: #3498DB;
+  --nav-bg: #2a2a2a;
+  --nav-link-color: #bbb;
+  --nav-link-hover: #ddd;
+  --footer-color: #bbb;
+  --sidenav-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+  --accent-green: #66ff66;
+  --accent-red: #ff6666;
+  --accent-purple: #c266ff;
+  --accent-yellow: #ffcc00;
+  --card-background: #2a2a2a;
+  --blog-date-color: #ddd;
+}
+
+/* Your other existing styles using these variables remain unchanged */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+
+/* Style page content */
+.main {
+  margin-left: 20%;
+  /* Same as the width of the sidenav */
+  font-size: 22px;
+  /* Increased text to enable scrolling */
+  line-height: 35px;
+  padding: 10%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  box-shadow: var(--sidenav-shadow);
+  overflow-x: hidden;
+  background: var(--nav-bg);
+}
+
+.navblock {
+  margin: auto;
+  width: 100%;
+  height: 90%;
+  display: flex;
+}
+
+.navblock_text {
+  margin: auto;
+  width: 100%;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.navblock_text a {
+  padding: 26px 16px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;
+  color: var(--nav-link-color);
+  display: block;
+}
+
+.navblock_text a:hover {
+  color: var(--nav-link-hover);
+}
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: var(--footer-color);
+  text-align: center;
+}
+
+.about_accent {
+  color: var(--accent-green);
+}
+
+.resume_accent {
+  color: var(--accent-green);
+}
+
+.research_accent {
+  color: var(--accent-red);
+}
+
+.blog_accent {
+  color: var(--accent-purple);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.about_photo {
+  display: block;
+  margin-top: 5%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about_logo {
+  display: block;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about_text {
+  text-align: center;
+}
+
+.about_header {
+  font-family: 'Permanent Marker', cursive;
+  color: var(--accent-yellow);
+}
+
+.about_links {
+  text-align: center;
+  padding-inline: 5rem;
+  margin-top: 0;
+
+}
+
+.portfolio_accent {
+  color: var(--accent-yellow);
+}
+
+.portfolio_image {
+  max-width: 300px;
+  max-height: 300px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.portfolio-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.portfolio-container>div {
+  background-color: var(--card-background);
+  width: 50%;
+  margin: 4% 0;
+  min-height: 20vh;
+  justify-content: center;
+  position: relative;
+}
+
+.portfolio-container_text {
+  width: 90%;
+  position: absolute;
+  text-align: left;
+}
+
+.portfolio-container_image {
+  width: 90%;
+  position: absolute;
+  text-align: center;
+  color: var(--accent-purple);
+}
+
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog-container>div {
+  background-color: var(--card-background);
+  box-shadow: 2px 2px 20px #EAECEE;
+  width: 45%;
+  margin: 5% 0;
+  min-height: 25vh;
+  line-height: 60px;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.blog_text {
+  width: 90%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.blog_date {
+  width: 95%;
+  padding-right: 5%;
+  font-size: 20px;
+  color: var(--blog-date-color);
+  text-align: end;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+  background: var(--background);
+  width: 100%;
+  /* Full width */
+  padding: 20px 25px;
+  height: 40px;
+  /* Fixed height for header */
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: var(--nav-link-color);
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+/* Hamburger animation classes */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.sidenav.active {
+  left: 0 !important;
+}
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1100px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .sidenav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50px;
+    /* Start below the header */
+    left: -100%;
+    transition: left 0.2s ease-in-out;
+    background: var(--nav-bg);
+  }
+
+  .sidenav.active {
+    left: 0;
+    /* Slide in */
+  }
+
+  .sidenav a {
+    text-align: center;
+    padding: 15px 25px;
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 20% 6%;
+    font-size: 18px;
+  }
+
+  .portfolio_image {
+    display: block;
+    max-width: 80%;
+  }
+
+  .navblock_text a {
+    padding: 16px;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .blog-container>div {
+    width: 100%;
+    min-height: 30vh;
+    margin: 10% 0;
+  }
+
+  .portfolio-container>div {
+    width: 100%;
+  }
+}
+
+.resume-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  /* Space between icon and text */
+}
+
+.resume-download {
+  text-decoration: none;
+  font-size: 0.9em;
+  color: inherit;
+}
+
+.calendly-inline-widget {
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+.main .calendly-inline-widget {
+  margin: 0 auto;
+}
