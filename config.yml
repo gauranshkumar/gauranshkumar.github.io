@@ -141,7 +141,7 @@ menu:
     #   weight: 40
     - identifier: Calendar
       name: Calendar
-      url: https://calendar.app.google/Y6LNvFnWTHg2sB6y7
+      url: https://calendly.com/gauranshk/meet-with-gauransh
       weight: 50
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
