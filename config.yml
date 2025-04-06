@@ -62,7 +62,7 @@ params:
     enabled: true # needs to be explicitly set
     title: Gauransh Kumar
     subtitle: "MS in Comp. Sci. @ UdeM"
-    imageUrl: "img/photo_gruv.jpeg"
+    imageUrl: "img/Gauransh.jpg"
     imageWidth: 200
     imageHeight: 200
     imageTitle: Gauransh K.
