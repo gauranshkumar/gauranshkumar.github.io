@@ -20,11 +20,30 @@ import { ClientRouter } from 'astro:transitions';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+        <!-- SEO Metadata -->
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={new URL("/photo.jpeg", Astro.site)} />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={Astro.url} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={new URL("/photo.jpeg", Astro.site)} />
+
         <ClientRouter />
 
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1FTB938XP"></script>
-        <script>
+        <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-L1FTB938XP"></script>
+        <script type="text/partytown">
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
@@ -40,7 +59,9 @@ import { ClientRouter } from 'astro:transitions';
         <div class="mx-auto max-w-[1100px] px-6 md:px-12 pb-16">
             
             <div class="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-12 items-start">
-                <slot name="sidebar" />
+                <div class={Astro.url.pathname === '/' ? '' : 'hidden md:block'}>
+                    <slot name="sidebar" />
+                </div>
                 <main class="min-w-0 pt-0 text-justify animate-fade-in">
                     <slot />
                 </main>

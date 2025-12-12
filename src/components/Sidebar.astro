@@ -22,7 +22,7 @@ const socialLinks = [
 ];
 ---
 
-<aside class="md:sticky md:top-20 h-fit text-sm animate-fade-in">
+<aside class="md:sticky md:top-20 h-fit text-sm animate-fade-in text-center md:text-left">
     <div class="mb-4">
         <Image 
             src={profileImage} 
@@ -41,7 +41,7 @@ const socialLinks = [
 
     <div class="border-t border-border mt-3 pt-3 space-y-2">
          <p><a href="mailto:gauransh.kumar@umontreal.ca" class="text-muted hover:text-accent transition-colors">gauransh.kumar@umontreal.ca</a></p>
-         <div class="flex flex-wrap gap-4 text-muted">
+         <div class="flex flex-wrap gap-4 text-muted justify-center md:justify-start">
             {socialLinks.slice(1).map(({ href, label, icon: Icon, svg }) => (
                 <a 
                     href={href} 
@@ -59,7 +59,7 @@ const socialLinks = [
     </div>
 
     <div class="border-t border-border mt-3 pt-3">
-         <a href={resumeFile} target="_blank" class="text-foreground hover:text-accent transition-colors flex items-center gap-1 font-medium">
+         <a href={resumeFile} target="_blank" class="text-foreground hover:text-accent transition-colors flex items-center justify-center md:justify-start gap-1 font-medium">
             Curriculum Vitae (PDF)
          </a>
     </div>
@@ -76,7 +76,7 @@ const socialLinks = [
         </div>
     </div>
 
-    <div class="mt-6 pt-4 border-t border-border flex items-center gap-3 opacity-80 filter grayscale hover:grayscale-0 transition-all duration-300">
+    <div class="mt-6 pt-4 border-t border-border flex items-center justify-center md:justify-start gap-3 opacity-80 filter grayscale hover:grayscale-0 transition-all duration-300">
         <img src={udemLogo.src} alt="UdeM" class="h-8 w-auto" />
         <img src={diroLogo.src} alt="DIRO" class="h-8 w-auto" />
     </div>
