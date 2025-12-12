@@ -6,9 +6,11 @@ interface Props {
 	url?: string;
     award?: string;
     tags?: { label: string; type: 'mentee' | 'mentor' }[];
+    year?: number;
+    type?: string;
 }
 
-const { title, authors, venue, url, award, tags } = Astro.props;
+const { title, authors, venue, url, award, tags, year, type } = Astro.props;
 ---
 
 <li class="group py-2 border-b border-border last:border-0">
@@ -26,7 +28,9 @@ const { title, authors, venue, url, award, tags } = Astro.props;
             ))}
         </div>
         
-        <div class="text-[0.9rem] text-muted italic">{venue}</div>
+        <div class="text-[0.9rem] text-muted italic">
+            {venue} {year ? `(${year})` : ""} {type ? `• ${type}` : ""}
+        </div>
 
         <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs pt-0">
             {award && (

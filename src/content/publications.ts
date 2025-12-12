@@ -2,7 +2,7 @@ export const publications = [
     {
         title: "Screening articles for systematic reviews with ChatGPT",
         authors: ["Eugene Syriani", "Istvan David", "Gauransh Kumar"], 
-        venue: "Journal of Computer Languages 2024",
+        venue: "Journal of Computer Languages",
         year: 2024,
         url: "https://doi.org/10.1016/j.cola.2024.101287",
         type: "Journal",
@@ -19,9 +19,9 @@ export const publications = [
     {
         title: "Automatic screening of articles for systematic reviews using large language models",
         authors: ["Gauransh Kumar"],
-        venue: "2025",
+        venue: "Université de Montréal",
         year: 2025,
-        url: "#",
+        url: "https://doi.org/10.71781/25708",
         type: "Thesis",
         tags: [
             //  { label: "Co-first author is my undergrad mentee", type: "mentee" }
