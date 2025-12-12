@@ -38,11 +38,26 @@
 }
 
 .prose {
-    @apply text-muted leading-relaxed;
+    @apply text-muted leading-relaxed max-w-none;
 }
 
 .prose a {
     @apply text-foreground underline decoration-muted/50 hover:decoration-foreground transition-all;
+}
+
+.prose strong {
+    @apply text-foreground font-semibold;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+    @apply text-foreground font-serif font-bold mt-8 mb-4;
+}
+
+.prose p {
+    @apply mb-4;
 }
 
 @keyframes fadeInUp {

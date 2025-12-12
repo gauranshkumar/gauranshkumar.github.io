@@ -9,9 +9,11 @@ const navLinks = [
     { href: '/blog', label: 'Blog' },
 ];
 
+const xSvg = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`;
+
 const socialLinks = [
     { href: "https://scholar.google.com/citations?user=JXxRHAsAAAAJ", label: "Scholar", icon: GraduationCap },
-    { href: "https://twitter.com/gauransh_k", label: "Twitter", icon: Twitter },
+    { href: "https://x.com/gauransh_k", label: "X", svg: xSvg },
     { href: "https://github.com/gauranshkumar", label: "GitHub", icon: Github },
 ];
 ---
@@ -37,7 +39,7 @@ const socialLinks = [
             <div class="h-4 w-px bg-border"></div>
 
             <div class="flex items-center gap-4 text-muted">
-                {socialLinks.map(({ href, label, icon: Icon }) => (
+                {socialLinks.map(({ href, label, icon: Icon, svg }) => (
                     <a 
                         href={href} 
                         target="_blank" 
@@ -45,7 +47,8 @@ const socialLinks = [
                         class="hover:text-accent transition-colors"
                         aria-label={label}
                     >
-                        <Icon class="w-4 h-4" />
+                        {Icon && <Icon class="w-4 h-4" />}
+                        {svg && <div class="w-4 h-4 fill-current" set:html={svg} />}
                     </a>
                 ))}
             </div>
