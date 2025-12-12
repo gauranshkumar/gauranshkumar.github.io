@@ -7,16 +7,22 @@ import resumeFile from '../assets/Gauransh_Resume.pdf';
 import udemLogo from '../assets/logo-udem.gif';
 import diroLogo from '../assets/15_DIRO_LOGO_CMYK.jpg';
 
+const orcidSvg = `<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128z" fill="currentColor"/><path d="M63.7 189.4c-6.5 0-12.3-5.4-12.6-12.4l-1.2-56.5c-1-16.7 13.5-30.8 30.2-29.6h.4c16.6 0 30 13.5 30 30.2v56h-.2c-.3 6.9-6.1 12.3-12.6 12.3H63.7zm106.8-.5h-24v-81h24c22.8 0 41.2 18.2 41.2 40.6s-18.4 40.4-41.2 40.4zm.5-94.8h-37.8v108.6h38c30.4 0 55.4-24.8 55.4-54.3s-25-54.3-55.6-54.3zM85 81.3c8.3 0 15-6.7 15-15s-6.7-15-15-15-15 6.7-15 15 6.7 15 15 15z" fill="#fff"/></svg>`;
+
+const researchGateSvg = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.564.377-.97.907-1.215 1.59l-.167.48-4.64 12.63-2.3-6.54 1.77-5.11c.218-.625.326-1.144.326-1.558 0-.44-.12-.823-.362-1.157-.24-.333-.615-.5-1.12-.5h-2.19c-.835 0-1.42.272-1.758.815-.335.545-.335 1.135 0 1.77L9.75 12.01l-4.72 11.21c-.302.72-.258 1.33.13 1.83.39.5.955.75 1.693.75h2.16c.884 0 1.493-.25 1.83-.75.253-.377.41-.83.473-1.36l.244-2.064h4.41c.49 0 .895-.115 1.21-.344.316-.23.51-.57.58-.99l.233-1.95h-5.69l1.64-5.22L16.29 20h.01l.01-.02.13-.37c.18-.53.51-1.25.99-2.18.476-.925 1.05-1.996 1.72-3.21.67-1.217 1.378-2.47 2.124-3.76.746-1.293 1.48-2.522 2.2-3.69l.157-.25c.34-.543.51-1.077.51-1.6 0-1.314-.735-2.274-2.204-2.88-.42-.175-.97-.24-1.642-.24h-1.376z"/></svg>`;
+
 const socialLinks = [
     { href: "mailto:gauransh.kumar@umontreal.ca", label: "Email", icon: Mail },
-    { href: "https://twitter.com/gauransh_k", label: "Twitter", icon: Twitter },
-    { href: "https://github.com/gauranshkumar", label: "GitHub", icon: Github },
     { href: "https://scholar.google.com/citations?user=JXxRHAsAAAAJ", label: "Scholar", icon: GraduationCap },
+    { href: "https://github.com/gauranshkumar", label: "GitHub", icon: Github },
     { href: "https://www.linkedin.com/in/gauranshk21", label: "LinkedIn", icon: Linkedin },
+    { href: "https://twitter.com/gauransh_k", label: "Twitter", icon: Twitter },
+    { href: "https://orcid.org/0009-0002-0232-9427", label: "ORCID", svg: orcidSvg },
+    { href: "https://www.researchgate.net/profile/Gauransh-Kumar", label: "ResearchGate", svg: researchGateSvg },
 ];
 ---
 
-<aside class="md:sticky md:top-20 h-fit text-sm">
+<aside class="md:sticky md:top-20 h-fit text-sm animate-fade-in">
     <div class="mb-4">
         <Image 
             src={profileImage} 
@@ -28,32 +34,32 @@ const socialLinks = [
             <h1 class="font-serif text-2xl mb-1 text-foreground">Gauransh Kumar</h1>
             <div class="text-[0.9375rem] text-muted space-y-1">
                 <p>PhD Student CS @ UdeM</p>
-
                 <p class="mt-1">Mila - Quebec AI Institute</p>
             </div>
         </div>
     </div>
 
     <div class="border-t border-border mt-3 pt-3 space-y-2">
-         <p><a href="mailto:gauransh.kumar@umontreal.ca" class="text-accent hover:underline">gauransh.kumar@umontreal.ca</a></p>
+         <p><a href="mailto:gauransh.kumar@umontreal.ca" class="text-muted hover:text-accent transition-colors">gauransh.kumar@umontreal.ca</a></p>
          <div class="flex flex-wrap gap-4 text-muted">
-            {socialLinks.slice(1).map(({ href, label, icon: Icon }) => (
+            {socialLinks.slice(1).map(({ href, label, icon: Icon, svg }) => (
                 <a 
                     href={href} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    class="hover:text-foreground transition-colors"
+                    class="text-muted hover:text-accent transition-colors"
                     aria-label={label}
                     title={label}
                 >
-                    <Icon class="w-5 h-5" />
+                    {Icon && <Icon class="w-5 h-5" />}
+                    {svg && <div class="w-5 h-5 fill-current" set:html={svg} />}
                 </a>
             ))}
          </div>
     </div>
 
     <div class="border-t border-border mt-3 pt-3">
-         <a href={resumeFile} target="_blank" class="text-accent hover:underline flex items-center gap-1 font-medium">
+         <a href={resumeFile} target="_blank" class="text-foreground hover:text-accent transition-colors flex items-center gap-1 font-medium">
             Curriculum Vitae (PDF)
          </a>
     </div>
@@ -61,7 +67,7 @@ const socialLinks = [
     <div class="border-t border-border mt-3 pt-3 text-[0.875rem] text-muted space-y-3">
         <div>
             <p class="text-foreground font-semibold mb-1">Advisor</p>
-            <p><a href="https://www.iro.umontreal.ca/~syriani/" class="text-accent hover:underline">Prof. Eugene Syriani</a></p>
+            <p><a href="https://www.iro.umontreal.ca/~syriani/" class="text-muted hover:text-accent transition-colors">Prof. Eugene Syriani</a></p>
         </div>
 
         <div>
