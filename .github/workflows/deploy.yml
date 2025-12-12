@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   # Trigger the workflow on push to master branch
   push:
-    branches: [ master ]
+    branches: [master, papermod-gruvbox]
   # Allow manual triggering
   workflow_dispatch:
 
