@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sidebar from '../components/Sidebar.astro';
+import { publications } from '../content/publications';
+import PaperItem from '../components/PaperItem.astro';
+import { getEntry, render } from 'astro:content';
+
+const aboutEntry = await getEntry('pages', 'about');
+const { Content: AboutContent } = aboutEntry ? await render(aboutEntry) : { Content: null };
+---
+
+<Layout title="Gauransh Kumar">
+    <Sidebar slot="sidebar" />
+    
+    {AboutContent && (
+        <section class="space-y-6">
+                <div class="prose prose-zinc dark:prose-invert max-w-none text-muted leading-relaxed">
+                <AboutContent />
+                </div>
+        </section>
+    )}
+
+
+
+    <section slot="bottom" class="pt-12">
+        <h2 class="font-serif text-2xl mb-4 text-foreground">Publications</h2>
+        
+        <p class="text-muted mb-6 leading-relaxed max-w-3xl">
+            I primarily publish in Software Engineering and AI venues. Top venues for my research include ASE, ICSE, and various AI journals.
+        </p>
+
+       <!-- <div class="bg-muted/30 rounded-lg p-4 mb-8 flex flex-wrap items-center gap-6 text-sm">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                <span class="text-muted-foreground">Co-first author is my undergrad mentee</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="text-muted-foreground">I contributed as a mentor</span>
+            </div>
+            <div class="bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded border border-amber-200 font-medium">
+                3 representative papers
+            </div>
+        </div>-->
+        
+        <ul class="space-y-0">
+            {publications.map(paper => (
+                <PaperItem 
+                    title={paper.title} 
+                    authors={paper.authors}
+                    venue={paper.venue}
+                    url={paper.url}
+                    award={paper.award}
+                    tags={paper.tags}
+                />
+            ))}
+        </ul>
+    </section>
+</Layout>

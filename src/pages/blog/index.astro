@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Sidebar from '../../components/Sidebar.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+const sortedPosts = posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+function formatDate(date: Date) {
+    return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+}
+---
+
+<Layout title="Blog - Gauransh Kumar">
+    <Sidebar slot="sidebar" />
+    
+    <section class="max-w-2xl">
+        <h1 class="font-serif text-3xl font-bold mb-8 text-foreground">Blog</h1>
+        
+        {sortedPosts.length === 0 ? (
+             <p class="text-muted italic">No posts yet.</p>
+        ) : (
+            <div class="space-y-10">
+                {sortedPosts.map(post => (
+                    <article class="group">
+                        <a href={`/blog/${post.id}`} class="block space-y-2">
+                            <h2 class="text-xl font-serif font-medium text-foreground group-hover:underline decoration-muted/50 underline-offset-4">
+                                {post.data.title}
+                            </h2>
+                            <div class="text-sm text-muted">
+                                {formatDate(post.data.date)}
+                            </div>
+                            {post.data.description && (
+                                <p class="text-muted leading-relaxed">
+                                    {post.data.description}
+                                </p>
+                            )}
+                        </a>
+                    </article>
+                ))}
+            </div>
+        )}
+    </section>
+</Layout>

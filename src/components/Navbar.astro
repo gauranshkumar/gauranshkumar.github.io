@@ -1,0 +1,77 @@
+---
+import { Github, Twitter, Mail, GraduationCap } from 'lucide-react';
+
+const navLinks = [
+    { href: '/', label: 'Home' },
+    { href: '/publications', label: 'Publications' },
+    { href: '/education', label: 'Education' },
+    { href: '/experience', label: 'Experience' },
+    { href: '/blog', label: 'Blog' },
+];
+
+const socialLinks = [
+    { href: "https://scholar.google.com/citations?user=JXxRHAsAAAAJ", label: "Scholar", icon: GraduationCap },
+    { href: "https://twitter.com/gauransh_k", label: "Twitter", icon: Twitter },
+    { href: "https://github.com/gauranshkumar", label: "GitHub", icon: Github },
+];
+---
+
+<header class="py-6 mb-8 md:mb-12 border-b border-border">
+    <nav class="flex items-center justify-between">
+        <h2 class="font-serif text-[1.25rem] font-normal tracking-[-0.01em] m-0">
+            <a href="/" class="hover:text-accent transition-colors">Gauransh Kumar</a>
+        </h2>
+
+        <div class="hidden md:flex items-center gap-6">
+            <div class="flex items-center gap-6 text-sm font-medium">
+                {navLinks.map(link => (
+                    <a 
+                        href={link.href} 
+                        class="text-muted hover:text-foreground transition-colors"
+                    >
+                        {link.label}
+                    </a>
+                ))}
+            </div>
+
+            <div class="h-4 w-px bg-border"></div>
+
+            <div class="flex items-center gap-4 text-muted">
+                {socialLinks.map(({ href, label, icon: Icon }) => (
+                    <a 
+                        href={href} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="hover:text-foreground transition-colors"
+                        aria-label={label}
+                    >
+                        <Icon class="w-4 h-4" />
+                    </a>
+                ))}
+            </div>
+        </div>
+
+        {/* Mobile menu button - simple implementation */}
+        <button class="md:hidden p-2 text-muted hover:text-foreground" aria-label="Menu" id="mobile-menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+    </nav>
+
+    {/* Mobile Menu (Hidden by default) */}
+    <div class="hidden md:hidden pt-4 pb-2 space-y-3 border-b border-border" id="mobile-menu">
+        {navLinks.map(link => (
+            <a href={link.href} class="block text-sm font-medium text-muted hover:text-foreground px-2 py-1">
+                {link.label}
+            </a>
+        ))}
+    </div>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn?.addEventListener('click', () => {
+            menu?.classList.toggle('hidden');
+        });
+    </script>
+</header>

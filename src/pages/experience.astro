@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sidebar from '../components/Sidebar.astro';
+
+const experiences = [
+    {
+        role: "DevOps Intern",
+        company: "Datazip",
+        period: "Dec 2022 – Jun 2023",
+        location: "Bangalore, India",
+        points: [
+            "Experienced in AWS cloud management and optimization, skilled in Amazon EKS, Terraform, EC2, and Kubernetes.",
+            "Implemented Kubernetes ingress strategies, reducing infrastructure costs by 20% by removing redundant Load Balancers.",
+            "Collaboratively enhanced system efficiency, accessibility, and uptimes by analyzing logs from both systems.",
+            "Managed and enhanced AWS systems to meet organizational needs, ensuring scalability, high availability, and fault tolerance.",
+            "Utilized the Leveraged SDK to incorporate various AWS services into applications."
+        ]
+    },
+    {
+        role: "Mitacs Globalink Research Intern",
+        company: "University of Montreal",
+        period: "Jul 2022 – Oct 2022",
+        location: "Montreal, CA",
+        points: [
+            "Collaborated with Professor Eugene Syriani on the ReLiS academic project, which aims to assist in Systematic Literature Reviews for software-related research.",
+            "The deployment structure was improved by implementing Microservices, resulting in increased scalability and agility.",
+            "Numerous software bugs were resolved, user feedback was addressed, and minor project improvements were implemented.",
+            "The Bibler Webservice component was improved by replacing the WSGI server technology with ASGI, significantly reducing the codebase by up to 90%.",
+            "ReLiS has been successfully deployed on a production server using microservices, enhancing client performance and integration with existing systems."
+        ]
+    },
+    {
+        role: "Technical Staff Intern",
+        company: "AIcrowd",
+        period: "Nov 2021 – May 2022",
+        location: "Remote (Switzerland)",
+        points: [
+            "Specifically aimed at enhancing the user experience in dealing with submissions for debugging from within the platform.",
+            "Contributed to the manual testing and feedback stage of new features that would be integrated into the AIcrowd platform, ensuring smooth operation and user satisfaction.",
+            "Wrote and developed neatly written code of a good standard, which was used in different aspects of the AIcrowd software architecture."
+        ]
+    }
+];
+---
+
+<Layout title="Experience - Gauransh Kumar">
+    <Sidebar slot="sidebar" />
+    
+    <section class="max-w-2xl">
+        <h1 class="font-serif text-3xl font-bold mb-8 text-foreground">Work Experience</h1>
+        
+        <div class="space-y-12">
+            {experiences.map((exp) => (
+                <div class="group">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                        <h3 class="font-semibold text-foreground text-lg group-hover:text-accent transition-colors">{exp.role}</h3>
+                        <span class="text-sm text-muted tabular-nums shrink-0">{exp.period}</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-3">
+                        <div class="text-foreground/80 font-medium">{exp.company}</div>
+                        <div class="text-xs text-muted font-normal">{exp.location}</div>
+                    </div>
+                    <ul class="list-disc pl-4 space-y-2 text-sm text-muted leading-relaxed marker:text-muted/50">
+                        {exp.points.map(point => (
+                            <li>{point}</li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+        </div>
+    </section>
+</Layout>

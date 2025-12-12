@@ -1,0 +1,76 @@
+Gauransh Kumar
+Montreal, CA | linkedin.com/in/gauranshk21 | gauranshk21@gmail.com | gauransh.dev
+
+
+EDUCATION
+University of Montreal	   2025-Present
+Ph.D Computer Science	
+University of Montreal	   2023-2025
+Software Engineering(NLP)/M.Sc. 	GPA:3.925 /4.3
+Maharaja Agrasen Institute Of Technology	2020-2023
+Computer Science and Engineering/B.Tech.	GPA:9.0/10
+Certifications:
+• Certified Kubernetes Application Developer (CKAD)
+• Google Cloud Certified Cloud Digital Leader
+
+
+
+
+TECHNICAL SKILLS & CERTIFICATIONS
+Languages: Python, JS, TS, C, C++, Java
+Technologies/Frameworks: Data Science, Machine Learning, Natural Language Processing, Kubernetes, DevOps, GitHub, Docker, Terraform, Prometheus, Grafana, AWS, Google Cloud, Azure,  React, Node, Bash, SQL
+Publications
+Screening articles for systematic reviews with ChatGPT	 2024
+Journal of Computer Languages (Best Paper Award Runner up)	
+https://doi.org/10.1016/j.cola.2024.101287
+Assessing the Ability of ChatGPT to Screen Articles for Systematic Reviews	 2023
+arXiv preprint	
+https://doi.org/10.48550/arXiv.2307.06464 
+
+WORK EXPERIENCE
+Datazip	 Bangalore, India
+DevOps Intern	Dec 2022 – Jun 2023
+Experienced in AWS cloud management and optimization, skilled in Amazon EKS, Terraform, EC2, and Kubernetes.
+Implemented Kubernetes ingress strategies, reducing infrastructure costs by 20% by removing redundant Load Balancers.
+Collaboratively enhanced system efficiency, accessibility, and uptimes by analyzing logs from both systems.
+Managed and enhanced AWS systems to meet organizational needs, ensuring scalability, high availability, and fault tolerance.
+Utilized the Leveraged SDK to incorporate various AWS services into applications.
+
+University of Montreal	 Montreal, CA
+Mitacs Globalink Research Intern’22	Jul 2022 – Oct 2022
+Collaborated with Professor Eugene Syriani on the ReLiS academic project, which aims to assist in Systematic Literature Reviews for software-related research.
+The deployment structure was improved by implementing Microservices, resulting in increased scalability and agility.
+Numerous software bugs were resolved, user feedback was addressed, and minor project improvements were implemented.
+The Bibler Webservice component was improved by replacing the WSGI server technology with ASGI, significantly reducing the codebase by up to 90%.
+ReLiS has been successfully deployed on a production server using microservices, enhancing client performance and integration with existing systems.
+
+
+AICrowd	 Remote (Switzerland)
+Technical Staff Intern	Nov 2021 – May 2022
+Specifically aimed at enhancing the user experience in dealing with submissions for debugging from within the platform.
+Contributed to the manual testing and feedback stage of new features that would be integrated into the AIcrowd platform, ensuring smooth operation and user satisfaction.
+Wrote and developed neatly written code of a good standard, which was used in different aspects of the AIcrowd software architecture.
+
+PROJECTS
+PromptSLR 	 July 2024
+Python, Prism, Prompt Engineering	https://github.com/geodes-sms/PromptSLR
+A tool to conduct and analyze experiments related to Prompt Engineering for Systematic Literature Review.
+Chithi 	 Oct 2021
+Python, Streamlit	github.com/gauranshkumar/chithi
+A Comprehensive Solution for Streamlining Bulk Email Communication
+Utilized functionalities such as recipient selection through Excel, CSV, and TSV files and the Markdown HTML-compatible Rich Editor with real-time Preview.
+Butterfly 	 June 2021
+Flutter, Android Studio	github.com/gauranshkumar/butterfly
+A Flutter App to help people deal with Mental Health Issues.
+
+
+GRANTS & ACHIEVEMENTS 
+Received Bourse de fin d'études de maîtrise - BFEM ESP E2024 of 6000 CAD for the duration of May 1, 2024 to April 30, 2025 given by ESP UdeM
+Received a grant from OpenAI of 2500 USD (as OpenAI credits)  for conducting research on the Master’s Thesis.
+Mitacs Globalink Graduate Fellowship of 15000 CAD from September 1, 2023, until April 30, 2024, given by Mitacs.
+Member of the Organizing Committee for ACM / IEEE 27th International Conference on Model Driven Engineering Languages and Systems (MODELS) 2024.
+Organised DIRO Hackathon’24 & 25.
+Recipient of the Linux Foundation Scholarship twice (2020 and 2022) - among 500 participants.
+Former DevOps Lead at Google Developer Students Club MAIT(Helping students by tutoring and organizing events).
+
+

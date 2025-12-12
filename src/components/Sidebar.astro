@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro:assets';
+import { Mail, Github, Linkedin, GraduationCap, FileText, Twitter } from 'lucide-react';
+import profileImage from '../assets/photo.jpeg';
+import resumeFile from '../assets/Gauransh_Resume.pdf';
+
+import udemLogo from '../assets/logo-udem.gif';
+import diroLogo from '../assets/15_DIRO_LOGO_CMYK.jpg';
+
+const socialLinks = [
+    { href: "mailto:gauransh.kumar@umontreal.ca", label: "Email", icon: Mail },
+    { href: "https://twitter.com/gauransh_k", label: "Twitter", icon: Twitter },
+    { href: "https://github.com/gauranshkumar", label: "GitHub", icon: Github },
+    { href: "https://scholar.google.com/citations?user=JXxRHAsAAAAJ", label: "Scholar", icon: GraduationCap },
+    { href: "https://www.linkedin.com/in/gauranshk21", label: "LinkedIn", icon: Linkedin },
+];
+---
+
+<aside class="md:sticky md:top-20 h-fit text-sm">
+    <div class="mb-4">
+        <Image 
+            src={profileImage} 
+            alt="Gauransh Kumar" 
+            class="w-full max-w-[260px] rounded-lg shadow-md mb-6 hover:-translate-y-0.5 transition-transform duration-300 mx-auto md:mx-0"
+        />
+        
+        <div class="pt-2">
+            <h1 class="font-serif text-2xl mb-1 text-foreground">Gauransh Kumar</h1>
+            <div class="text-[0.9375rem] text-muted space-y-1">
+                <p>PhD Student CS @ UdeM</p>
+
+                <p class="mt-1">Mila - Quebec AI Institute</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="border-t border-border mt-3 pt-3 space-y-2">
+         <p><a href="mailto:gauransh.kumar@umontreal.ca" class="text-accent hover:underline">gauransh.kumar@umontreal.ca</a></p>
+         <div class="flex flex-wrap gap-4 text-muted">
+            {socialLinks.slice(1).map(({ href, label, icon: Icon }) => (
+                <a 
+                    href={href} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="hover:text-foreground transition-colors"
+                    aria-label={label}
+                    title={label}
+                >
+                    <Icon class="w-5 h-5" />
+                </a>
+            ))}
+         </div>
+    </div>
+
+    <div class="border-t border-border mt-3 pt-3">
+         <a href={resumeFile} target="_blank" class="text-accent hover:underline flex items-center gap-1 font-medium">
+            Curriculum Vitae (PDF)
+         </a>
+    </div>
+
+    <div class="border-t border-border mt-3 pt-3 text-[0.875rem] text-muted space-y-3">
+        <div>
+            <p class="text-foreground font-semibold mb-1">Advisor</p>
+            <p><a href="https://www.iro.umontreal.ca/~syriani/" class="text-accent hover:underline">Prof. Eugene Syriani</a></p>
+        </div>
+
+        <div>
+            <p class="text-foreground font-semibold mb-1">Interests</p>
+            <p>Software Engineering, NLP, LLMs</p>
+        </div>
+    </div>
+
+    <div class="mt-6 pt-4 border-t border-border flex items-center gap-3 opacity-80 filter grayscale hover:grayscale-0 transition-all duration-300">
+        <img src={udemLogo.src} alt="UdeM" class="h-8 w-auto" />
+        <img src={diroLogo.src} alt="DIRO" class="h-8 w-auto" />
+    </div>
+</aside>

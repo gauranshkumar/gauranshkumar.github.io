@@ -1,0 +1,48 @@
+---
+interface Props {
+	title: string;
+	authors: string[];
+	venue: string;
+	url?: string;
+    award?: string;
+    tags?: { label: string; type: 'mentee' | 'mentor' }[];
+}
+
+const { title, authors, venue, url, award, tags } = Astro.props;
+---
+
+<li class="group py-2 border-b border-border last:border-0">
+    <a href={url} target="_blank" class="block space-y-1">
+        <h3 class="font-sans text-[1rem] font-bold text-foreground group-hover:text-accent transition-colors leading-tight">{title}</h3>
+        
+        <div class="text-[0.9375rem] text-muted leading-snug">
+            {authors.map((author, i) => (
+                <>
+                    <span class={author.includes("Gauransh") || author.includes("Kumar") ? "text-foreground font-semibold" : ""}>
+                        {author}
+                    </span>
+                    {i < authors.length - 1 ? ", " : ""}
+                </>
+            ))}
+        </div>
+        
+        <div class="text-[0.9rem] text-muted italic">{venue}</div>
+
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs pt-0">
+            {award && (
+                <div class="flex items-center gap-1.5 text-amber-600 font-medium">
+                     <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                     <span>{award}</span>
+                </div>
+            )}
+            
+            {tags?.map(tag => (
+                <div class="flex items-center gap-1.5 text-muted/80">
+                    <span class={`w-1.5 h-1.5 rounded-full ${tag.type === 'mentee' ? 'bg-blue-400' : 'bg-emerald-400'}`}></span>
+                    <span>{tag.label}</span>
+                </div>
+            ))}
+        </div>
+    </a>
+</li>
+
