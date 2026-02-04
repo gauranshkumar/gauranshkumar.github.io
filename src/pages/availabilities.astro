@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sidebar from '../components/Sidebar.astro';
+---
+
+<Layout title="Availabilities - Gauransh Kumar" wide={true}>
+    <Sidebar slot="sidebar" />
+    
+    <section class="w-full">
+        <h1 class="font-serif text-3xl font-bold mb-8 text-foreground">Availabilities</h1>
+        
+        <div class="w-full aspect-[4/3] md:aspect-[16/10] bg-muted/5 rounded-lg border border-border overflow-hidden">
+            <iframe 
+                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FToronto&showPrint=0&src=Z2F1cmFuc2hrMjFAZ21haWwuY29t&color=%23039be5" 
+                style="border-width:0" 
+                width="100%" 
+                height="100%" 
+                frameborder="0" 
+                scrolling="no"
+                title="Gauransh's Calendar"
+            ></iframe>
+        </div>
+    </section>
+</Layout>

@@ -5,9 +5,10 @@ import Navbar from '../components/Navbar.astro';
 interface Props {
 	title?: string;
     description?: string;
+    wide?: boolean;
 }
 
-const { title = "Gauransh Kumar", description = "Personal website of Gauransh Kumar" } = Astro.props;
+const { title = "Gauransh Kumar", description = "Personal website of Gauransh Kumar", wide = false } = Astro.props;
 import { ClientRouter } from 'astro:transitions';
 ---
 
@@ -56,7 +57,7 @@ import { ClientRouter } from 'astro:transitions';
             <Navbar />
         </div>
 
-        <div class="mx-auto max-w-[1100px] px-6 md:px-12 pb-16">
+        <div class:list={["mx-auto px-6 md:px-12 pb-16", wide ? "max-w-[1400px]" : "max-w-[1100px]"]}>
             
             <div class="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-12 items-start">
                 <div class={Astro.url.pathname === '/' ? '' : 'hidden md:block'}>
